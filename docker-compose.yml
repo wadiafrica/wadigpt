@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  fastapi-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" # Map FastAPI app to local port 8000
+    volumes:
+      - .:/app       # Mount local directory into container for live updates
+      - /app/venv    # Prevent overwriting Python virtual environment
+    stdin_open: true
+    tty: true
+    environment:
+      - PYTHONUNBUFFERED=1
