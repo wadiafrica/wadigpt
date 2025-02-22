@@ -6,3 +6,8 @@ starlette
 python-dotenv
 pyjwt
 chainlit
+openai
+transformers 
+torch
+huggingface-hub
+py-cpuinfo
