@@ -18,7 +18,7 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Install ctransformers with no prebuilt binary
-RUN pip install ctransformers --no-binary ctransformers
+RUN pip install ctransformers
 
 # Copy the rest of the application code into the container
 COPY . .
